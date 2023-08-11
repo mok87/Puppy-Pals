@@ -4,17 +4,20 @@ import './App.css'
 
 function App() {
   const [puppies, setPuppies] = useState(puppyList) 
-  console.log("puppylist",puppyList)
+  const [featPupId, setFeatPupId] = useState(null)
+  console.log("puppyList: ",setPuppies);
+
+  
+  
   return (
-   <>
-      <div className='App'>
-        {
-          puppies.map((puppy)=>{
-            return <p key={puppy.id}>{puppy.name}</p>
-          })
-        }
-      </div>
-    </>
+    <div>
+      <h1>Puppy Pals</h1>
+      {
+        puppies.map((puppy) =>{
+          return <p key={puppy.id}>{puppy.name}</p>
+        })
+      }
+    </div>
   )
 }
 
